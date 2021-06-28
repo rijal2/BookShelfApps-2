@@ -25,14 +25,15 @@ input, button {
 main {
     /* max-width: 1400px; */
     width: 100%;
-    height: 1000px;
-    background: url('asset/3.svg'), url('asset/2.svg');
-    background-repeat: no-repeat, no-repeat;
+    height: 1500px;
+    background: url('asset/3.svg');
+    background-repeat: no-repeat;
     background-size: auto;
+    background-position-y: bottom;
     margin: 0 auto;
     padding: 16px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
     border: 2px solid rgb(221, 19, 19);
 
 }
@@ -137,10 +138,10 @@ main {
 
 .container  {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     border: 2px solid black;
     width: 650px;
-    height: 100%;
+    /* height: 100%; */
     padding-bottom: 6px;
 }
 
@@ -195,3 +196,38 @@ main {
     margin-top: 2px;
     text-align: right;
 }
+
+.completed {
+    background-color: darkslategray;
+    color: whitesmoke;
+}
+
+.uncompleted {
+    background-color: lightcoral;
+    color: white;
+}
+
+.utama {
+    border: 2px solid black;
+    align-self:flex-start;
+}
+@media only screen and (max-width: 720px) {
+
+    /* For mobile phones: */
+    
+    .main {
+        width: 720px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input_section, .search_section, .container {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container{
+        width: 700px;
+    }
+  }

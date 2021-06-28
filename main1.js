@@ -17,8 +17,10 @@ function toRakBuku (teksJudul, teksPenulis, teksTahun, isCompleted){
     action.className = "action";
 
     if(isCompleted){
+        newArticle.classList.add('completed')
         action.append(doCompletedBtn(), deleteBtn())
     } else{
+        newArticle.classList.add('uncompleted')
         action.append(doUnCompletedBtn(), deleteBtn())
     }
 
