@@ -35,14 +35,17 @@ function createBtn (buttonTypeClass, eventListener){
     button.textContent = "Hapus"
     button.classList.add(buttonTypeClass);
     button.addEventListener("click", function (event) {
+        if(confirm("Apakah kamu yakin Ingin menghapus Buku ini ?")){
         eventListener(event);
         event.stopPropagation();
+        }
     });
     return button;
 }
 
 function deleteBtn (){
     return createBtn("red", function(event){
+
         deleteBook(event.target.parentElement.parentElement)
     })
 }
@@ -52,16 +55,17 @@ function toCompletedBtn (classBtn, eventListener){
     btn.textContent = "Completed"
     btn.classList.add(classBtn)
     btn.addEventListener("click", function(e) {
+        
+        if(confirm("Apakah kamu yakin akan memindahkan buku ini ke RAK 2 (Sudah Selesai dibaca) ?")){
         eventListener(e)
         e.stopPropagation();
-
+        }
     })
     return btn;
 }
 
 function doCompletedBtn (){
     return toUnCompletedBtn("green", function(e){
-        // unCompletedBook(e.path[2].parentElement)
         unCompletedBook(e.target.parentElement.parentElement)
     })
 }
@@ -71,17 +75,17 @@ function toUnCompletedBtn (classBtn, eventListener){
     btn.textContent = "Uncompleted"
     btn.classList.add(classBtn)
     btn.addEventListener("click", function(e) {
+        if(confirm("Apakah kamu yakin akan memindahkan buku ini ke RAK 1 (Belum Selesai dibaca) ?")){
         eventListener(e)
         e.stopPropagation();
-
+        }
     })
     return btn;
 }
 
 function doUnCompletedBtn (){
     return toCompletedBtn("green", function(e){
-        // isCompletedBook(e.path[2].parentElement
-        isCompletedBook(e.target.parentElement.parentElement)
+        isCompletedBook(e.target.parentElement.parentElement);   
     })
 }
 
@@ -111,21 +115,19 @@ function inputBook(){
 }
 
 function isCompletedBook (rakBookList) {
-    const listCompleted = document.getElementById(READ_BOOK_COMPLETE);
+    
     const judulBuku = rakBookList.querySelector("h3").innerText;
     const namaPenulis = rakBookList.querySelector("p").innerText;
     const angkaTahun = rakBookList.querySelector("h5").innerText;
 
+    const listCompleted = document.getElementById(READ_BOOK_COMPLETE);
     const newBookComplited = toRakBuku(judulBuku, namaPenulis, angkaTahun, true);
-    
-
     const listBook = temukan(rakBookList[ITEM_BOOK]);
     listBook.isCompleted = true;
     newBookComplited[ITEM_BOOK] = listBook.id;
-
     listCompleted.append(newBookComplited);
     rakBookList.remove();
-
+    
     updateDataToStorage();
 }
 
@@ -136,8 +138,6 @@ function unCompletedBook (rakBookList) {
     const angkaTahun = rakBookList.querySelector("h5").innerText;
 
     const newBookComplited = toRakBuku(judulBuku, namaPenulis, angkaTahun, false);
-    
-
     const listBook = temukan(rakBookList[ITEM_BOOK]);
     listBook.isCompleted = false;
     newBookComplited[ITEM_BOOK] = listBook.id;
@@ -151,8 +151,8 @@ function unCompletedBook (rakBookList) {
 function deleteBook (rakBookList) {
     const letakObject = temukanIndex(rakBookList[ITEM_BOOK]);
     bookShelfApps.splice(letakObject, 1);
-
     rakBookList.remove();
+   
     updateDataToStorage();
 }
 
@@ -170,3 +170,21 @@ function refreshData () {
         }
     }
 }
+
+// const findList = document.querySelector("#searchBookTitle");
+// findList.addEventListener("keyup", findList())
+
+// function findList (){
+//     const toFindList = e.target.value.toLowerCase()
+//     let item = document.querySelectorAll(".book_list")
+
+//     item.forEach((item) => {
+//         const isi = item.firstChild.firstChild.textContent.toLowerCase();
+
+//         if(isi.indexOf(toFindList) != -1) {
+//             item.setAttribute("style", "display : block;");
+//         } else {
+//             item.setAttribute("style", "display : none !important;");
+//         }
+//     })
+// }

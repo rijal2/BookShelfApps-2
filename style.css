@@ -17,18 +17,23 @@ input, button {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: rgb(24, 25, 26);
     color: rgb(208, 228, 28);
 }
 
 main {
-    max-width: 1400px;
+    /* max-width: 1400px; */
     width: 100%;
+    height: 1000px;
+    background: url('asset/3.svg'), url('asset/2.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto;
     margin: 0 auto;
     padding: 16px;
     display: flex;
     justify-content: space-evenly;
-    border: 2px solid black;
+    border: 2px solid rgb(221, 19, 19);
 
 }
 
@@ -178,9 +183,15 @@ main {
 .book_shelf > .book_list > .book_item > .action > .green {
     background-color: darkgreen;
     color: white;
+    font-size: 10px;
+    margin-top: 2px;
+    text-align: right;
 }
 
 .book_shelf > .book_list > .book_item > .action > .red {
     background-color: darkred;
     color: white;
+    font-size: 10px;
+    margin-top: 2px;
+    text-align: right;
 }

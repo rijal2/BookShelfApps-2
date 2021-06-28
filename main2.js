@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // event.preventDefault();
         inputBook();
 
-    judul = "";
-    penulis = "";
-    tahun = "";
+    
     });
 
     if(isStorageExist()){
@@ -26,5 +24,3 @@ document.addEventListener("ondataloaded", () => {
     refreshData ()
  });
 
-
- const statusBuku = document.getElementById("check").checked;

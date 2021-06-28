@@ -43,7 +43,7 @@ function buatObjectBuku (teksJudul, teksPenulis, teksTahun, isCompleted) {
     };
  }
 
- function /*findTodo*/ temukan (temukanId) {
+ function temukan (temukanId) {
 
     for(book of bookShelfApps){
         if(book.id === temukanId)
@@ -53,11 +53,11 @@ function buatObjectBuku (teksJudul, teksPenulis, teksTahun, isCompleted) {
     return null;
 }
 
-function /*findTodoIndex*/ temukanIndex(temukanId /*todoId*/) {
+function temukanIndex(temukanIdx) {
     
     let index = 0
     for (book of bookShelfApps) {
-        if(book.id === temukanId)
+        if(book.id === temukanIdx)
             return index;
 
         index++;
