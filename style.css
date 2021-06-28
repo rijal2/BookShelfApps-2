@@ -17,15 +17,18 @@ input, button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: cornflowerblue;
-    color: white;
+    background-color: rgb(24, 25, 26);
+    color: rgb(208, 228, 28);
 }
 
 main {
-    max-width: 800px;
-    width: 80%;
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     padding: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid black;
 
 }
 
@@ -130,6 +133,10 @@ main {
 .container  {
     display: flex;
     justify-content: space-evenly;
+    border: 2px solid black;
+    width: 650px;
+    height: 100%;
+    padding-bottom: 6px;
 }
 
 .book_shelf {
@@ -137,6 +144,7 @@ main {
     border: 1px solid black;
     padding: 16px;
     border-radius: 10px;
+    width: 300px;
 }
 
 .book_shelf > h2 {

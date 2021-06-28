@@ -105,7 +105,9 @@ function inputBook(){
     }else{
         belumSelesai.append(buku);
     }
-    updateDataToStorage()
+    
+    updateDataToStorage();
+    
 }
 
 function isCompletedBook (rakBookList) {

@@ -15,88 +15,82 @@
     <h1 class="head_bar__title">Bookshelf Apps</h1>
 </header>
 <main>
-    <section class="input_section">
-        <h2>Masukkan Buku Baru</h2>
-        <form id="inputBook">
-            <div class="input">
-                <label for="inputBookTitle">Judul</label>
-                <input id="inputBookTitle" type="text" placeholder="Masukkan judul buku disini ..." required>
-            </div>
-            <div class="input">
-                <label for="inputBookAuthor">Penulis</label>
-                <input id="inputBookAuthor" type="text" placeholder="Siapa nama penulis bukunya?" required>
-            </div>
-            <div class="input">
-                <label for="inputBookYear">Tahun</label>
-                <input id="inputBookYear" type="number" min="1900" max="2099" step="1" name="year" placeholder="Tahun berapa diterbitkan?" required>
-                
-            </div>
-            <div class="input-inline">
-                <!-- <label for="inputBookYear">Status Buku yang anda tambahkan?</label>
-                <select id="status" name="status">
-                    <option value=false>Belum dibaca</option>
-                    <option value=true>Selesai dibaca</option>
-                </select> -->
-                <select id="check">
-                    <!-- <input type="radio" id="inputBookIsComplete" name="gender" value="true">
-                    <label for="male">Sudah dibaca</label><br>
-                    <input type="radio" id="inputUnBookIsComplete" name="gender" value="false">
-                    <label for="female">Belum selesai dibaca</label><br> -->
-                    <option value="true">Selesai dibaca</option>
-                    <option value="false">Belum selesai dibaca</option>
-                </select>
-            </div>
-            <button id="bookSubmit" type="submit">Masukkan Buku ke dalam rak</button>
-        </form>
-    </section>
-
-    <section class="search_section">
-        <h2>Cari Buku (Opsional)</h2>
-        <form id="searchBook">
-            <label for="searchBookTitle">Judul</label>
-            <input id="searchBookTitle" type="text">
-            <button id="searchSubmit" type="submit">Cari</button>
-        </form>
-    </section>
-
-    <div class="container">
-        <section class="book_shelf" id="rak1">
-            <h2>RAK 1</h2>
-            <marquee><h2>Belum selesai dibaca</h2></marquee>
-
-            <div id="unCompletedList" class="book_list">
-                        <article class="book_item">
-                            <h3>Book Title</h3>
-                            <p>Penulis: John Doe</p>
-                            <h5>Tahun: 2002</h5>
-
-                            <div class="action">
-                                <button class="green">Completed</button>
-                                <button class="red">Hapus buku</button>
-                            </div>
-                        </article>
-            </div>
+    <div>
+        <section class="input_section">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="inputBookTitle">Judul</label>
+                    <input id="inputBookTitle" type="text" placeholder="Masukkan judul buku disini ..." required>
+                </div>
+                <div class="input">
+                    <label for="inputBookAuthor">Penulis</label>
+                    <input id="inputBookAuthor" type="text" placeholder="Siapa nama penulis bukunya?" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookYear">Tahun</label>
+                    <input id="inputBookYear" type="number" min="1900" max="2099" step="1" name="year" placeholder="Tahun berapa diterbitkan?" required>
+                    
+                </div>
+                <div class="input">
+                    <select class="input" id="check">
+                        <option value="true">Selesai dibaca</option>
+                        <option value="false">Belum selesai dibaca</option>
+                    </select>
+                </div>
+                <button id="bookSubmit" type="submit">Masukkan Buku ke dalam rak</button>
+            </form>
         </section>
 
-        <section class="book_shelf" id="rak2">
-            <h2>RAK 2</h2>
-            <marquee><h2>Selesai dibaca</h2></marquee>
-
-            <div id="isCompletedList" class="book_list">
-                        <article class="book_item">
-                            <h3>Book Title</h3>
-                            <p>Penulis: Doe</p>
-                            <h5>Tahun: 2002</h5>
-
-                            <div class="action">
-                                <button class="green">Uncompleted</button>
-                                <button class="red">Hapus buku</button>
-                            </div>
-                            </article>
-            </div>
+        <section class="search_section">
+            <h2>Cari Buku (Opsional)</h2>
+            <form id="searchBook">
+                <label for="searchBookTitle">Judul</label>
+                <input id="searchBookTitle" type="text">
+                <button id="searchSubmit" type="submit">Cari</button>
+            </form>
         </section>
     </div>
 
+    <div>
+        <div class="container">
+            <section class="book_shelf" id="rak1">
+                <h2>RAK 1</h2>
+                <marquee><h2>Belum selesai dibaca</h2></marquee>
+
+                <div id="unCompletedList" class="book_list">
+                            <!-- <article class="book_item">
+                                <h3>Book Title</h3>
+                                <p>Penulis: John Doe</p>
+                                <h5>Tahun: 2002</h5>
+
+                                <div class="action">
+                                    <button class="green">Completed</button>
+                                    <button class="red">Hapus buku</button>
+                                </div>
+                            </article> -->
+                </div>
+            </section>
+
+            <section class="book_shelf" id="rak2">
+                <h2>RAK 2</h2>
+                <marquee><h2>Selesai dibaca</h2></marquee>
+
+                <div id="isCompletedList" class="book_list">
+                            <!-- <article class="book_item">
+                                <h3>Book Title</h3>
+                                <p>Penulis: Doe</p>
+                                <h5>Tahun: 2002</h5>
+
+                                <div class="action">
+                                    <button class="green">Uncompleted</button>
+                                    <button class="red">Hapus buku</button>
+                                </div>
+                                </article> -->
+                </div>
+            </section>
+        </div>
+</div>
 </main>
 
 <script src="main1.js"></script>
