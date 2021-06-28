@@ -61,7 +61,8 @@ function toCompletedBtn (classBtn, eventListener){
 
 function doCompletedBtn (){
     return toUnCompletedBtn("green", function(e){
-        unCompletedBook(e.path[2].parentElement)
+        // unCompletedBook(e.path[2].parentElement)
+        unCompletedBook(e.target.parentElement.parentElement)
     })
 }
 
@@ -79,7 +80,8 @@ function toUnCompletedBtn (classBtn, eventListener){
 
 function doUnCompletedBtn (){
     return toCompletedBtn("green", function(e){
-        isCompletedBook(e.path[2].parentElement)
+        // isCompletedBook(e.path[2].parentElement
+        isCompletedBook(e.target.parentElement.parentElement)
     })
 }
 
