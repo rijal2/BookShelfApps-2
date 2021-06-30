@@ -5,6 +5,7 @@ const ITEM_BOOK = "bookId"
 function toRakBuku (teksJudul, teksPenulis, teksTahun, isCompleted){
     const judulBuku = document.createElement("h3");
     judulBuku.innerText = teksJudul;
+    judulBuku.classList.add('judul')
     const namaPenulis = document.createElement("p");
     namaPenulis.innerText = teksPenulis;
     const angkaTahun = document.createElement("h5");
@@ -172,21 +173,3 @@ function refreshData () {
         }
     }
 }
-
-// const findList = document.querySelector("#searchBookTitle");
-// findList.addEventListener("keyup", findList())
-
-// function findList (){
-//     const toFindList = e.target.value.toLowerCase()
-//     let item = document.querySelectorAll(".book_list")
-
-//     item.forEach((item) => {
-//         const isi = item.firstChild.firstChild.textContent.toLowerCase();
-
-//         if(isi.indexOf(toFindList) != -1) {
-//             item.setAttribute("style", "display : block;");
-//         } else {
-//             item.setAttribute("style", "display : none !important;");
-//         }
-//     })
-// }
