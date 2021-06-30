@@ -33,6 +33,7 @@ main {
     padding: 16px;
     display: flex;
     justify-content: space-evenly;
+    /* align-items: center; */
     /* border: 2px solid rgb(221, 19, 19); */
 
 }
@@ -43,7 +44,8 @@ main {
     padding: 16px;
     /* border: 1px solid black;
     border-radius: 10px; */
-    flex: 3
+    flex: 3;
+    width: 70%;
 }
 
 .input_section > h3 {
@@ -60,18 +62,22 @@ main {
 }
 
 .input_section > form > button {
-    background-color: cornflowerblue;
-    color: white;
-    border: 0;
+    
+    background-color: blue;
+    border: 2px solid wheat;
+    color: rgb(238, 241, 241);
+    font-weight: bold;
     border-radius: 5px;
-    /* display: block; */
-    width: 100%;
+    display: block;
+    width: 20%;
     padding: 8px;
     cursor: pointer;
+    justify-content: flex-end;
 }
 
 .input_section > form > button > span {
     font-weight: bold;
+   
 }
 
 .input_section > form > .input > input {
@@ -86,9 +92,9 @@ main {
 
 .input_section > form > .input > label {
     width: 100%;
-    color: rgb(248, 248, 248);
-    font-weight: bold;
-    background-color: rgb(151, 135, 135);
+    background-color: rgb(22, 1, 22);
+    border: 2px solid white;
+    color:rgb(208, 228, 28);
     border-radius: 5px;
     margin-bottom: 10px;
     padding-left: 10px;
@@ -116,6 +122,7 @@ main {
     /* border: 1px solid black; */
     border-radius: 10px;
     flex: 1;
+    width: 70%;
 }
 
 .search_section > h3 {
@@ -141,9 +148,12 @@ main {
 .search_section > form > label {
     display: flex;
     align-items: center;
-    background-color: thistle;
+    background-color: rgb(22, 1, 22);
+    border: 2px solid white;
+    color:rgb(208, 228, 28);
     border-radius: 10px;
-    padding: 2px 10px 2px 10px
+    padding: 2px 10px 2px 10px;
+    
 
 }
 
@@ -154,9 +164,9 @@ main {
 }
 
 .search_section > form > button {
-    background-color: cornflowerblue;
+    background-color: rgb(9, 61, 4);
     color: white;
-    border: 0;
+    border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
     padding: 5px 20px 5px 20px;
@@ -254,12 +264,13 @@ main {
     align-self:flex-start;
     min-height: 500px;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    /* justify-content: center; */
+    flex-direction: column;;
 }
 
 .pertama {
     flex: 1;
+    align-items: center;
 }
 
 .kedua {
@@ -282,12 +293,12 @@ footer{
 #myDIV {
     /* width: 300px; */
     /* height: 200px; */
-    background: rgba(106, 142, 35, 0.750);
+    background: rgba(106, 142, 35);
     animation: mymove 5s infinite;
   }
   
   @keyframes mymove {
-    50% {background-color: rgba(71, 61, 139, 0.750);}
+    50% {background-color: rgba(71, 61, 139);}
   }
 
 
@@ -310,7 +321,7 @@ footer{
 @media only screen and (min-width: 992px) {
    .main    {
        display: flex;
-       flex-wrap: wrap;
+       flex-direction: column;
    }
 
 }
