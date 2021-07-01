@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     submitForm.addEventListener("submit", function (event) {
         // event.preventDefault();
+        if(confirm("Apakah anda yakin ingin menambahkan buku ke dalam rak?")){
         inputBook();
-
+    }
     
     });
 

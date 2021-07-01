@@ -109,8 +109,10 @@ function inputBook(){
 
     if(isCompleted){
         sudahSelesai.append(buku);
+        alert("Selamat, Buku berhasil ditambahkan ke RAK 2 (Sudah Selesai dibaca)!")
     }else{
         belumSelesai.append(buku);
+        alert("Selamat, Buku berhasil ditambahkan ke RAK 1 (Belum Selesai dibaca)!")
     }
     
     updateDataToStorage();
